@@ -172,7 +172,7 @@ class SPADE(object):
             
             """
 
-            x = fully_connected(x, units=z_height * z_width * channel, use_bias=True, sn=False, scope='linear_x')
+            x = fully_connected(x, units=self.batch_size * z_height * z_width * channel, use_bias=True, sn=False, scope='linear_x')
             x = tf.reshape(x, [self.batch_size, z_height, z_width, channel])
 
 
